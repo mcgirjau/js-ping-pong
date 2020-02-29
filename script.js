@@ -52,11 +52,7 @@ function SetupCanvas() {
   canvas = document.getElementById('my-canvas');
   ctx = canvas.getContext('2d');
   canvas.width = document.body.clientWidth - 30;
-  canvas.height = Math.max(
-    document.body.scrollHeight, document.documentElement.scrollHeight,
-    document.body.offsetHeight, document.documentElement.offsetHeight,
-    document.body.clientHeight, document.documentElement.clientHeight
-  ) - 50;
+  canvas.height = document.body.clientHeight - 50;
   player = new Paddle('left');
   computer = new Paddle('right');
   ball = new Ball(6);
